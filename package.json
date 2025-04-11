@@ -1,0 +1,17 @@
+{
+  "name": "cypress-project",
+  "version": "1.0.0",
+  "description": "A Cypress project for testing applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "test:headless": "cypress run"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "cypress": "^13.6.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
