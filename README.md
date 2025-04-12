@@ -10,13 +10,13 @@ CypressTests
 │   ├── fixtures
 │   │   └── example.json
 │   ├── integration
-│   │   └── sample_spec.js
+│   │   └── github-profile.spec.js
 │   ├── plugins
 │   │   └── index.js
 │   └── support
 │       ├── commands.js
 │       └── index.js
-├── cypress.json
+├── cypress.config.js
 ├── package.json
 └── README.md
 ```
@@ -42,15 +42,25 @@ CypressTests
 
 ## Running Tests
 
-To run the Cypress tests, use the following command:
+You can run the tests in two ways:
+
+### Headless Mode
+To run tests in headless mode (CI-friendly):
+```
+npx cypress run --headless
+```
+
+### Interactive Mode
+To open Cypress Test Runner:
 ```
 npx cypress open
 ```
-This will open the Cypress Test Runner, where you can select and run your tests.
 
-## Writing Tests
+## Current Tests
 
-Tests are located in the `cypress/integration` directory. You can create new test files or modify existing ones to suit your testing needs.
+The project currently includes the following tests:
+
+- `github-profile.spec.js`: Tests GitHub profile navigation and repository validation
 
 ## Custom Commands
 
@@ -58,7 +68,7 @@ You can define custom commands in the `cypress/support/commands.js` file. These 
 
 ## Configuration
 
-The `cypress.json` file contains configuration settings for your Cypress tests. You can modify this file to set the base URL, viewport size, and other options.
+The `cypress.config.js` file contains configuration settings for your Cypress tests (Cypress 14.3.0). You can modify this file to set the base URL, viewport size, and other options.
 
 ## License
 
